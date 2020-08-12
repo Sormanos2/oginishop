@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('front.home');
 });
@@ -20,3 +19,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix'=>'admin'], function(){
+    
+    // =============================dashboard==================================
+    Route::get('/dashboard', 'Admin\AdminController@index')->name('dashboard');
+    
+    // =============================product==================================
+    Route::get('products','Admin\ProductController@index')->name('products');
+});
