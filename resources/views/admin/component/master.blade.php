@@ -1,400 +1,247 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="{{ asset('admin/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('admin/bower_components/font-awesome/css/font-awesome.min.css') }}">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="{{ asset('admin/bower_components/Ionicons/css/ionicons.min.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('admin/dist/css/AdminLTE.min.css') }}">
-
-  <link rel="stylesheet" href="{{ asset('admin/dist/css/skins/skin-blue.min.css') }}">
-
-  <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
-  <!-- Main Header -->
-  <header class="main-header">
-
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
-    </a>
-
-    <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-      <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <!-- Menu toggle button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>
-                <!-- inner menu: contains the messages -->
-                <ul class="menu">
-                  <li><!-- start message -->
-                    <a href="#">
-                      <div class="pull-left">
-                        <!-- User Image -->
-                        <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
-                      </div>
-                      <!-- Message title and timestamp -->
-                      <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>
-                      <!-- The message -->
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <!-- end message -->
-                </ul>
-                <!-- /.menu -->
-              </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li>
-          <!-- /.messages-menu -->
-
-          <!-- Notifications Menu -->
-          <li class="dropdown notifications-menu">
-            <!-- Menu toggle button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>
-                <!-- Inner Menu: contains the notifications -->
-                <ul class="menu">
-                  <li><!-- start notification -->
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <!-- end notification -->
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>
-          <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <!-- Task title and progress text -->
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <!-- The progress bar -->
-                      <div class="progress xs">
-                        <!-- Change the css width attribute to simulate progress -->
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
-          <!-- User Account Menu -->
-          <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- The user image in the navbar-->
-              <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-              <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- The user image in the menu -->
-              <li class="user-header">
-                <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
-        </ul>
+<html lang="en">
+   <!-- Mirrored from smartadmin.lodev09.com/php_api_docs.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2020 08:31:34 GMT -->
+   <!-- Added by HTTrack -->
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <!-- /Added by HTTrack -->
+   <head>
+      <meta charset="utf-8">
+      <title>Documentation - REST API - SmartAdmin v4.5.2</title>
+      <meta name="description" content="Documentation - REST API - SmartAdmin v4.5.2">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+      <!-- Call App Mode on ios devices -->
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <!-- Remove Tap Highlight on Windows Phone IE -->
+      <meta name="msapplication-tap-highlight" content="no">
+      <!-- base css -->
+      <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="{{ asset('admin/assets/css/vendors.bundle.css') }}">
+      <link id="appbundle" rel="stylesheet" media="screen, print" href="{{ asset('admin/assets/css/app.bundle.css') }}">
+      <link id="mytheme" rel="stylesheet" media="screen, print" href="{{ asset('admin/assets/css/mytheme.css') }}">
+      <link id="myskin" rel="stylesheet" media="screen, print" href="{{ asset('admin/assets/css/skins/skin-master.css') }}">
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('admin/assets/img/favicon/apple-touch-icon.png') }}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin/assets/img/favicon/favicon-32x32.png') }}">
+      <link rel="mask-icon" href="{{ asset('admin/assets/img/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+      <meta name="hostname" content="smartadmin.lodev09.com">
+      <meta name="app-url" content="index.html">
+      <meta name="assets-url" content="assets/index.html">
+      <meta name="environment" content="dev">
+      <!-- Optional: page related CSS -->
+      <!-- PHP docs -->
+      <link rel="stylesheet" media="screen, print" href="{{ asset('admin/assets/css/markdown.css') }}">
+      @yield('stylesheet')
+   </head>
+   <body class="mod-bg-1 mod-nav-link ">
+      <!-- DOC: script to save and load page settings -->
+      <script>
+         /**
+          *	This script should be placed right after the body tag for fast execution
+          *	Note: the script is written in pure javascript and does not depend on thirdparty library
+          **/
+         'use strict';
+         
+         var classHolder = document.getElementsByTagName("BODY")[0],
+             /**
+              * Load from localstorage
+              **/
+             themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
+             {},
+             themeURL = themeSettings.themeURL || '',
+             themeOptions = themeSettings.themeOptions || '';
+         /**
+          * Load theme options
+          **/
+         if (themeSettings.themeOptions)
+         {
+             classHolder.className = themeSettings.themeOptions;
+             console.log("%c✔ Theme settings loaded", "color: #148f32");
+         }
+         else
+         {
+             console.log("%c✔ Heads up! Theme settings is empty or does not exist, loading default settings...", "color: #ed1c24");
+         }
+         if (themeSettings.themeURL && !document.getElementById('mytheme'))
+         {
+             var cssfile = document.createElement('link');
+             cssfile.id = 'mytheme';
+             cssfile.rel = 'stylesheet';
+             cssfile.href = themeURL;
+             document.getElementsByTagName('head')[0].appendChild(cssfile);
+         
+         }
+         else if (themeSettings.themeURL && document.getElementById('mytheme'))
+         {
+             document.getElementById('mytheme').href = themeSettings.themeURL;
+         }
+         /**
+          * Save to localstorage
+          **/
+         var saveSettings = function()
+         {
+             themeSettings.themeOptions = String(classHolder.className).split(/[^\w-]+/).filter(function(item)
+             {
+                 return /^(nav|header|footer|mod|display)-/i.test(item);
+             }).join(' ');
+             if (document.getElementById('mytheme'))
+             {
+                 themeSettings.themeURL = document.getElementById('mytheme').getAttribute("href");
+             };
+             localStorage.setItem('themeSettings', JSON.stringify(themeSettings));
+         }
+         /**
+          * Reset settings
+          **/
+         var resetSettings = function()
+         {
+             localStorage.setItem("themeSettings", "");
+         }
+         
+      </script>
+      <!-- BEGIN Page Wrapper -->
+      <div class="page-wrapper">
+         <div class="page-inner">
+            <!-- BEGIN Left Aside -->
+            @include('admin.component.left-side-menu')
+            <!-- END Left Aside -->
+            <div class="page-content-wrapper">
+               <!-- BEGIN Page Header -->
+               <!-- BEGIN Page Header -->
+                @include('admin.component.page-header')
+               <!-- END Page Header -->
+               <!-- END Page Header -->
+               <!-- BEGIN Page Content -->
+               <!-- the #js-page-content id is needed for some plugins to initialize -->
+               <main id="js-page-content" role="main" class="page-content">
+                  <ol class="breadcrumb page-breadcrumb">
+                     <li class="breadcrumb-item"><a href="javascript:void(0);">SmartAdmin</a></li>
+                     <li class="breadcrumb-item">REST API</li>
+                     <li class="breadcrumb-item active">Documentation</li>
+                     <li class="position-absolute pos-top pos-right d-none d-sm-block"><span class="js-get-date"></span></li>
+                  </ol>
+                  @yield('content')
+               </main>
+               <!-- END Page Content -->
+               <!-- this overlay is activated only when mobile menu is triggered -->
+               <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
+               <!-- BEGIN Page Footer -->
+               <!-- BEGIN Page Footer -->
+                @include('admin.component.footer')
+               <!-- END Page Footer -->
+               <!-- END Page Footer -->
+            </div>
+         </div>
       </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-
-      <!-- search form (Optional) -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-
-      <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- /.sidebar-menu -->
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content container-fluid">
-
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:;">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:;">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="pull-right-container">
-                    <span class="label label-danger pull-right">70%</span>
-                  </span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-  immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
-
-<!-- REQUIRED JS SCRIPTS -->
-
-<!-- jQuery 3 -->
-<script src="{{ asset('admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('admin/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
-</body>
+      <!-- END Page Wrapper -->
+      <!-- BEGIN Quick Menu -->
+      <!-- BEGIN Quick Menu -->
+      <!-- to add more items, please make sure to change the variable '$menu-items: number;' in your _page-components-shortcut.scss -->
+      <nav class="shortcut-menu d-none d-sm-block">
+         <input type="checkbox" class="menu-open" name="menu-open" id="menu_open" />
+         <label for="menu_open" class="menu-open-button ">
+         <span class="app-shortcut-icon d-block"></span>
+         </label>
+         <a href="#" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Scroll Top">
+         <i class="fal fa-arrow-up"></i>
+         </a>
+         <a href="page_login.html" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
+         <i class="fal fa-sign-out"></i>
+         </a>
+         <a href="#" class="menu-item btn" data-action="app-fullscreen" data-toggle="tooltip" data-placement="left" title="Full Screen">
+         <i class="fal fa-expand"></i>
+         </a>
+      </nav>
+      <!-- END Quick Menu -->
+      <!-- END Quick Menu -->
+      <!-- BEGIN Colors -->
+      <!-- BEGIN Color profile -->
+      <!-- this area is hidden and will not be seen on screens or screen readers -->
+      <!-- we use this only for CSS color refernce for JS stuff -->
+      <p id="js-color-profile" class="d-none">
+         <span class="color-primary-50"></span>
+         <span class="color-primary-100"></span>
+         <span class="color-primary-200"></span>
+         <span class="color-primary-300"></span>
+         <span class="color-primary-400"></span>
+         <span class="color-primary-500"></span>
+         <span class="color-primary-600"></span>
+         <span class="color-primary-700"></span>
+         <span class="color-primary-800"></span>
+         <span class="color-primary-900"></span>
+         <span class="color-info-50"></span>
+         <span class="color-info-100"></span>
+         <span class="color-info-200"></span>
+         <span class="color-info-300"></span>
+         <span class="color-info-400"></span>
+         <span class="color-info-500"></span>
+         <span class="color-info-600"></span>
+         <span class="color-info-700"></span>
+         <span class="color-info-800"></span>
+         <span class="color-info-900"></span>
+         <span class="color-danger-50"></span>
+         <span class="color-danger-100"></span>
+         <span class="color-danger-200"></span>
+         <span class="color-danger-300"></span>
+         <span class="color-danger-400"></span>
+         <span class="color-danger-500"></span>
+         <span class="color-danger-600"></span>
+         <span class="color-danger-700"></span>
+         <span class="color-danger-800"></span>
+         <span class="color-danger-900"></span>
+         <span class="color-warning-50"></span>
+         <span class="color-warning-100"></span>
+         <span class="color-warning-200"></span>
+         <span class="color-warning-300"></span>
+         <span class="color-warning-400"></span>
+         <span class="color-warning-500"></span>
+         <span class="color-warning-600"></span>
+         <span class="color-warning-700"></span>
+         <span class="color-warning-800"></span>
+         <span class="color-warning-900"></span>
+         <span class="color-success-50"></span>
+         <span class="color-success-100"></span>
+         <span class="color-success-200"></span>
+         <span class="color-success-300"></span>
+         <span class="color-success-400"></span>
+         <span class="color-success-500"></span>
+         <span class="color-success-600"></span>
+         <span class="color-success-700"></span>
+         <span class="color-success-800"></span>
+         <span class="color-success-900"></span>
+         <span class="color-fusion-50"></span>
+         <span class="color-fusion-100"></span>
+         <span class="color-fusion-200"></span>
+         <span class="color-fusion-300"></span>
+         <span class="color-fusion-400"></span>
+         <span class="color-fusion-500"></span>
+         <span class="color-fusion-600"></span>
+         <span class="color-fusion-700"></span>
+         <span class="color-fusion-800"></span>
+         <span class="color-fusion-900"></span>
+      </p>
+      <!-- END Color profile -->
+      <!-- END Colors -->
+      <!-- BEGIN Page Settings -->
+      <!-- BEGIN Page Settings -->
+        @include('admin.component.layout-setting')
+      <!-- END Page Settings -->
+      <!-- END Page Settings -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143247136-2"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         
+         function gtag()
+         {
+             dataLayer.push(arguments);
+         }
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-143247136-2');
+         
+      </script>
+      <script src="{{ asset('admin/assets/js/vendors.bundle.js') }}"></script>
+      <script src="{{ asset('admin/assets/js/app.bundle.js') }}"></script>
+      @yield('scripts')
+   </body>
 </html>
