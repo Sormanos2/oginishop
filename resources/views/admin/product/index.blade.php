@@ -19,9 +19,9 @@
             </div>
             <div class="panel-container show">
                 <div class="panel-content">
-                    {{-- <div class="float-right">
-                        <button type="button" class="btn btn-sm btn-primary waves-effect waves-themed" style="margin-bottom:10px;">New Product</button>
-                    </div> --}}
+                    <div class="float-right">
+                        <button type="button" class="btn btn-sm btn-outline-primary waves-effect waves-themed" style="margin-top:10px;">New</button>
+                    </div>
                     <!-- datatable start -->
                     <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
                         <thead class="bg-primary-600">
@@ -79,6 +79,7 @@
 </div>
 @endsection
 @section('scripts')
+    <script src="{{  asset('admin/assets/js/datagrid/datatables/datatables.bundle.js') }}"></script>
     <script src="{{  asset('admin/assets/js/datagrid/datatables/datatables.export.js') }}"></script>
     <script>
         $(document).ready(function()
@@ -94,36 +95,7 @@
                     "<'row'<'col-sm-12'tr>>" +
                     "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
                 buttons: [
-                    {
-                        extend: 'pdfHtml5',
-                        text: 'PDF',
-                        titleAttr: 'Generate PDF',
-                        className: 'btn-outline-danger btn-sm mr-1'
-                    },
-                    {
-                        extend: 'excelHtml5',
-                        text: 'Excel',
-                        titleAttr: 'Generate Excel',
-                        className: 'btn-outline-success btn-sm mr-1'
-                    },
-                    {
-                        extend: 'csvHtml5',
-                        text: 'CSV',
-                        titleAttr: 'Generate CSV',
-                        className: 'btn-outline-primary btn-sm mr-1'
-                    },
-                    {
-                        extend: 'copyHtml5',
-                        text: 'Copy',
-                        titleAttr: 'Copy to clipboard',
-                        className: 'btn-outline-primary btn-sm mr-1'
-                    },
-                    {
-                        extend: 'print',
-                        text: 'Print',
-                        titleAttr: 'Print Table',
-                        className: 'btn-outline-primary btn-sm'
-                    }
+                   
                 ]
             });
 
